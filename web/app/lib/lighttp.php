@@ -111,6 +111,11 @@ function run () {
 	$requestUrl = getRequestPath();
 	
 	$routWasFound = false;
+
+	if (getHttpRequestMethod() == HttpMethod::PUT ||
+		getHttpRequestMethod() == HttpMethod::DELETE) {
+		parse_str(file_get_contents('php://input'), $_POST);
+	}
 	
 	foreach ($routes as $trash => $route) {
 		
