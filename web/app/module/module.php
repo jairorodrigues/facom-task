@@ -7,12 +7,13 @@ function buscar_usuario_por_identificador($identificador) {
 function buscar_tarefas_do_usuario($usuario) {
 	return R::getAll(
 		'select
-			id, nome, prioridade
+			id, nome, prioridade, feita
 		from
 			tarefa
 		where
 			usuario_id=?
 		order by
+			feita,
 			prioridade desc',
 		array($usuario->id)
 	);
