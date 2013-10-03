@@ -1,0 +1,2 @@
+scp -r web/app/* 524ce800e0b8cd5ad90000d2@facomtask-jairorodrigues.rhcloud.com:~/app-root/runtime/repo/php
+scp web/app/.htaccess 524ce800e0b8cd5ad90000d2@facomtask-jairorodrigues.rhcloud.com:~/app-root/runtime/repo/php
